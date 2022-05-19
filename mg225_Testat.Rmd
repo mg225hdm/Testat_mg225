@@ -1,0 +1,53 @@
+---
+title: "mg225_Testat"
+output: html_document
+autor: Manuela Gieger
+Kürzel: mg225
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+library(igraph)
+```
+
+#Daten und Codebuch
+
+Die Daten und das Codebuch sind in meinem [Github-Account](https://github.com/mg225hdm/Testat_mg225) hinterlegt.
+
+```{r Netzwerk einlesen}
+
+library(igraph)
+
+# Einlesen der Edge- und Nodelist
+edges <- read.csv("https://raw.githubusercontent.com/mg225hdm/Testat_mg225/main/mg225_Testat_%20Edgelist_Abkuerzungen.csv", header=T, as.is=T, sep = ",")
+
+nodes <- read.csv("https://raw.githubusercontent.com/mg225hdm/Testat_mg225/main/mg225_Testat_Nodelist_Abkuerzungen.csv", header=T, as.is=T, sep = ",")
+
+# Matrix erstellen
+edgematrix <-as.matrix(edges)
+
+# Zusammenführen von Edge- und Nodelist als igraph-Objekt n
+n <- graph_from_data_frame(d=edgematrix, directed=F)
+n
+
+```
+
+
+```{r Netzwerk analysieren, fig.height=6, fig.width=9}
+
+plot(n,
+     asp=0,
+     layout=layout_nicely,
+     rescale=TRUE,
+     vertex.size=degree(n)*4,
+     vertex.frame.color="black",
+     edge.color="black",
+     edge.arrow.size=2,
+     main="VFB Kader",
+     sub="Visualisierung nach Nationalität, Rückennummer und vorherigen Vereinen")
+
+```
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
