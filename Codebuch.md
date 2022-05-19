@@ -1,17 +1,18 @@
-Codebuch				
-Edgelist				
+#Codebuch	
+
+##Edgelist				
 from	vorheriger Verein/Rückennummer			
 to	Rückennummer/Nationalität			
 weight	Transfersumme in Hundertausend Euro gerundet			
 season	Transferfenster = Transferjahr zum VFB			
 				
-Nodelist				
+##Nodelist				
 id	Rückennummer Spieler/Abkürzung Verein/Abkürzung Nationalität			
 name	Name Spieler/Verein/Land			
 country	Nationalität Spieler/Land Transferverein			
 type	1=Spieler, 2=Verein			
 				
-Vereine				
+##Vereine				
 V1	1. FCV Mainz			
 V2	1. FC Nürnberg			
 V3	VFB Stuttgart II			
@@ -41,7 +42,7 @@ V26	Admira Wacker
 V27	Sporting Lissabon			
 V28	Vejle Boldklub			
 				
-Länder				
+##Länder				
 DE	Deutschland			
 GR	Griechenland			
 UZ	Usbekistan			
