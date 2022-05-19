@@ -1,7 +1,7 @@
 # Codebuch
 
 ## Edgelist				
-from	vorheriger Verein/Rückennummer	
+from	vorheriger Verein/Rückennummer	<br>
 to	Rückennummer/Nationalität
 weight	Transfersumme in Hundertausend Euro gerundet	
 season	Transferfenster = Transferjahr zum VFB			
